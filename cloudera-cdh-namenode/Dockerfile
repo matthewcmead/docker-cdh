@@ -8,9 +8,9 @@
 #
 # The container will use supervisor to start both the namenode and the secondarynamenode.
 ###########################################################################################
-FROM loicmathieu/cloudera-cdh:cdh-5.14.0
+FROM matthewcmead/cloudera-cdh:cdh-5.14.2
 
-MAINTAINER Loic Mathieu <loicmathieu@free.fr>
+MAINTAINER matthewcmead
 
 #init namenode directory
 RUN mkdir -p /hdfs/nm
