@@ -35,4 +35,10 @@ ENV HADOOP_HDFS_HOME /usr/lib/hadoop-hdfs
 ENV HADOOP_YARN_HOME /usr/lib/hadoop-yarn
 ENV HADOOP_MAPRED_HOME /usr/lib/hadoop-mapreduce
 
+# Add Tini
+ENV TINI_VERSION v0.18.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
+RUN chmod +x /tini
+ENTRYPOINT ["/tini", "--"]
+
 CMD ["hadoop", "version"]

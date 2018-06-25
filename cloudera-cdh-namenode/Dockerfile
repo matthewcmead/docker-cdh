@@ -27,8 +27,14 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 #expose namenode port
 EXPOSE 8020
 
+#chown hdfs the namenode data
+RUN chown -R hdfs:hadoop /hdfs
+
 #define HDFS volume to enable to persist namenode fsimage between restart
 VOLUME /hdfs
 
+#startup script
+COPY startup.sh /startup.sh
+
 #start the supervisor
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+CMD ["/startup.sh"]
