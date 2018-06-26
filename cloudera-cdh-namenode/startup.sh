@@ -31,4 +31,7 @@ if [ ! -d /hdfs/nm/current ]; then
   runuser -u hdfs -- hdfs namenode -format
 fi
 
+/setup_hdfs.sh &
+disown %1
+
 exec /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf

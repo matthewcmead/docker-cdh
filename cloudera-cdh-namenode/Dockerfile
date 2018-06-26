@@ -35,6 +35,7 @@ VOLUME /hdfs
 
 #startup script
 COPY startup.sh /startup.sh
+COPY setup_hdfs.sh /setup_hdfs.sh
 
 #start the supervisor
 CMD ["/startup.sh"]
