@@ -46,6 +46,12 @@ while [ $isdone == 0 ]; do
   if [ $hdfs_active == 1 ]; then
     setup_dir /tmp hdfs hadoop drwxrwxrwt 1777 || exit 1
     setup_dir /user hdfs hadoop drwxr-xr-x 0755 || exit 1
+    setup_dir /tmp/hadoop-yarn yarn hadoop drwxrwxrwt 1777 || exit 1
+    setup_dir /tmp/hadoop-yarn/fail yarn hadoop drwxrwxrwt 1777 || exit 1
+    setup_dir /tmp/hadoop-yarn/staging yarn hadoop drwxrwxrwt 1777 || exit 1
+    setup_dir /tmp/hadoop-yarn/staging/history yarn hadoop drwxrwxrwt 1777 || exit 1
+    setup_dir /tmp/hadoop-yarn/staging/history/done yarn hadoop drwxrwxrwt 1777 || exit 1
+    setup_dir /tmp/hadoop-yarn/staging/history/done_intermediate yarn hadoop drwxrwxrwt 1777 || exit 1
     exit 0
   fi
   sleep 5
