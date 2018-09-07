@@ -24,4 +24,5 @@ RUN mkdir /staging
 VOLUME /staging
 
 USER user
+WORKDIR /home/user
 CMD ["bash"]
