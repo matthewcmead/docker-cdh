@@ -24,6 +24,10 @@ RUN yum -y install epel-release && rm -rf /var/cache/yum/*
 #Install hadoop and supervisor so that the derived images will not be too fat
 RUN yum -y install hadoop supervisor &&  rm -rf /var/cache/yum/*
 
+RUN yum -y install sudo && rm -rf /var/cache/yum/*
+RUN adduser user
+RUN echo "user ALL=(ALL) NOPASSWD: ALL" >/etc/sudoers.d/user
+
 #copy hadoop conf
 COPY config/* /usr/lib/hadoop/etc/hadoop/
 

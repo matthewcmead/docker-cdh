@@ -23,4 +23,5 @@ RUN mkdir /staging
 
 VOLUME /staging
 
+USER user
 CMD ["bash"]
