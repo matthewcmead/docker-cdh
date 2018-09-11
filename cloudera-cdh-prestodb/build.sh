@@ -14,14 +14,4 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 cd "$DIR"
 
-for dir in $(echo "
-cloudera-cdh
-cloudera-cdh-datanode
-cloudera-cdh-edgenode
-cloudera-cdh-namenode
-cloudera-cdh-yarnmaster
-cloudera-cdh-edgenode
-cloudera-cdh-prestodb
-"); do
-  "$dir/build.sh"
-done
+docker build -t matthewcmead/cloudera-cdh-presto:cdh-5.14.2 .

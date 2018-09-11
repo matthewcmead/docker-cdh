@@ -25,6 +25,13 @@ COPY hive-site.xml /etc/hive/conf/hive-site.xml
 
 #VOLUME /staging
 
+ARG PRESTO_VER=0.210
+
+RUN curl -o /home/user/bin/presto https://repo1.maven.org/maven2/com/facebook/presto/presto-cli/${PRESTO_VER}/presto-cli-${PRESTO_VER}-executable.jar \
+&&  chmod 755 /home/user/bin/presto
+
+ENV PRESTO_VER=${PRESTO_VER}
+
 USER user
 WORKDIR /home/user
 CMD ["bash"]
