@@ -21,6 +21,7 @@ cloudera-cdh-edgenode
 cloudera-cdh-namenode
 cloudera-cdh-yarnmaster
 cloudera-cdh-edgenode
+cloudera-cdh-hivemetastore
 cloudera-cdh-prestodb
 "); do
   "$dir/build.sh"
