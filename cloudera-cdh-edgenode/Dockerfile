@@ -12,16 +12,18 @@ MAINTAINER matthewcmead
 RUN yum -y install pig hive flume-ng sqoop2 spark-worker && rm -rf /var/cache/yum/*
 
 #copy test data and script
-COPY cities.* /
+#COPY cities.* /
 
 #copy flume conf and start scripts
-COPY flume/* /
-RUN chmod +x /start_flume.sh
+#COPY flume/* /
+#RUN chmod +x /start_flume.sh
+
+COPY hive-site.xml /etc/hive/conf/hive-site.xml
 
 #create a staging disk to send/get data to/from the clusrer
-RUN mkdir /staging
+#RUN mkdir /staging
 
-VOLUME /staging
+#VOLUME /staging
 
 USER user
 WORKDIR /home/user

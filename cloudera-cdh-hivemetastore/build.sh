@@ -14,5 +14,4 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 cd "$DIR"
 
-rsync -avP ../cloudera-cdh-hivemetastore/hive-site.xml hive-site.xml
-docker build -t matthewcmead/cloudera-cdh-edgenode:cdh-5.14.2 .
+docker build -t matthewcmead/cloudera-cdh-hivemetastore:cdh-5.14.2 .
