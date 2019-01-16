@@ -24,5 +24,7 @@ RUN chmod 755 /startup.sh
 ENV MYSQL_HOST=mysql
 EXPOSE 9083
 
+VOLUME /data
+
 #start the supervisor
 CMD ["/startup.sh"]

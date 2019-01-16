@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+exec presto.bin --server presto:9876 --user user --catalog hive --schema default

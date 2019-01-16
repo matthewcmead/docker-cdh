@@ -20,7 +20,36 @@
 <configuration>
   <property>
      <name>fs.defaultFS</name>
-     <value>hdfs://namenode:8020</value>
+     <value>s3a://data</value>
+  </property>
+  <property>
+      <name>fs.s3a.endpoint</name>
+      <description>AWS S3 endpoint to connect to.</description>
+      <value>http://minio:9000</value>
+  </property>
+  <property>
+      <name>fs.s3a.access.key</name>
+      <description>AWS access key ID.</description>
+      <value>abc</value>
+  </property>
+  <property>
+      <name>fs.s3a.secret.key</name>
+      <description>AWS secret key.</description>
+      <value>abc12345</value>
+  </property>
+  <property>
+      <name>fs.s3a.path.style.access</name>
+      <value>true</value>
+      <description>Enable S3 path style access.</description>
+  </property>
+  <property>
+      <name>fs.s3a.impl</name>
+      <value>org.apache.hadoop.fs.s3a.S3AFileSystem</value>
+      <description>The implementation of S3A Filesystem</description>
+  </property>
+  <property>
+      <name>fs.s3a.connection.ssl.enabled</name>
+      <value>false</value>
   </property>
 
 </configuration>

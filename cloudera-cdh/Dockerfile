@@ -27,7 +27,7 @@ RUN yum -y install hadoop supervisor &&  rm -rf /var/cache/yum/*
 RUN yum -y install sudo && rm -rf /var/cache/yum/*
 RUN adduser user
 RUN mkdir /home/user/bin && chown user:user /home/user/bin
-RUN echo 'export PATH=${HOME}/bin:${PATH}' >>/home/user/.bashrc
+#RUN echo 'export PATH=${HOME}/bin:${PATH}' >>/home/user/.bash_profile
 RUN echo "user ALL=(ALL) NOPASSWD: ALL" >/etc/sudoers.d/user
 
 #copy hadoop conf

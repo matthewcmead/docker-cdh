@@ -27,8 +27,10 @@ COPY hive-site.xml /etc/hive/conf/hive-site.xml
 
 ARG PRESTO_VER=0.210
 
-RUN curl -o /home/user/bin/presto https://repo1.maven.org/maven2/com/facebook/presto/presto-cli/${PRESTO_VER}/presto-cli-${PRESTO_VER}-executable.jar \
-&&  chmod 755 /home/user/bin/presto
+RUN curl -o /home/user/bin/presto.bin https://repo1.maven.org/maven2/com/facebook/presto/presto-cli/${PRESTO_VER}/presto-cli-${PRESTO_VER}-executable.jar \
+&&  chmod 755 /home/user/bin/presto.bin
+
+COPY bin/presto /home/user/bin/presto
 
 ENV PRESTO_VER=${PRESTO_VER}
 

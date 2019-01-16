@@ -66,5 +66,9 @@
    <name>yarn.application.classpath</name>
    <value>/etc/hadoop/conf,/usr/lib/hadoop/*,/usr/lib/hadoop/lib/*,/usr/lib/hadoop-hdfs/*,/usr/lib/hadoop-hdfs/lib/*,/usr/lib/hadoop-yarn/*,/usr/lib/hadoop-yarn/lib/*,/usr/lib/hadoop-mapreduce/*,/usr/lib/hadoop-mapreduce/lib/*</value>
   </property>
+  <property>
+    <name>yarn.nodemanager.disk-health-checker.max-disk-utilization-per-disk-percentage</name>
+    <value>99.9</value>
+  </property>
 </configuration>
 

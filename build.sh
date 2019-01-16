@@ -14,6 +14,8 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 cd "$DIR"
 
+set -e
+
 for dir in $(echo "
 cloudera-cdh
 cloudera-cdh-datanode

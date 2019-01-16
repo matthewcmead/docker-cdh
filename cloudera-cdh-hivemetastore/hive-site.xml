@@ -11,6 +11,7 @@
 
   <!-- Hive Execution Parameters -->
 
+<!--
   <property>
     <name>javax.jdo.option.ConnectionURL</name>
     <value>jdbc:mysql://MYSQL_HOST/metastore?createDatabaseIfNotExist=true</value>
@@ -49,12 +50,6 @@
   </property>
 
   <property>
-    <name>hive.hwi.war.file</name>
-    <value>/usr/lib/hive/lib/hive-hwi-1.1.0-cdh5.14.2.jar</value>
-    <description>This is the WAR file with the jsp content for Hive Web Interface</description>
-  </property>
-
-  <property>
     <name>datanucleus.fixedDatastore</name>
     <value>true</value>
   </property>
@@ -62,6 +57,13 @@
   <property>
     <name>datanucleus.autoCreateSchema</name>
     <value>false</value>
+  </property>
+-->
+
+  <property>
+    <name>hive.hwi.war.file</name>
+    <value>/usr/lib/hive/lib/hive-hwi-1.1.0-cdh5.14.2.jar</value>
+    <description>This is the WAR file with the jsp content for Hive Web Interface</description>
   </property>
 
   <property>
