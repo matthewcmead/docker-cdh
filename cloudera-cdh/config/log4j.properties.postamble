@@ -1,0 +1,4 @@
+log4j.logger.org.apache.hadoop.metrics2.impl.MetricsConfig=WARN
+log4j.logger.org.apache.hadoop.metrics2.impl.MetricsSinkAdapter=WARN
+log4j.logger.org.apache.hadoop.metrics2.impl.MetricsSystemImpl=WARN
+log4j.logger.org.apache.hadoop.conf.Configuration=WARN
