@@ -20,7 +20,6 @@ for dir in $(echo "
 cloudera-cdh
 cloudera-cdh-datanode
 cloudera-cdh-edgenode
-cloudera-cdh-namenode
 cloudera-cdh-yarnmaster
 cloudera-cdh-edgenode
 cloudera-cdh-hivemetastore
