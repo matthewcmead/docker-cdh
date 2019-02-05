@@ -15,7 +15,7 @@ RUN mkdir -p /hdfs/data
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 #expose port
-EXPOSE 50020 50075 8042
+EXPOSE 8042
 
 #chown hdfs the datanode data
 RUN chown -R hdfs:hadoop /hdfs
